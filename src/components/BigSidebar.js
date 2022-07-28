@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import { useSelector } from "react-redux";
 import NavLinks from "./NavLinks";
 const Wrapper = styled.main`
-  display: block;
+
   height: 100%;
   width: 100%;
   .sidebar {
@@ -27,9 +27,7 @@ const Wrapper = styled.main`
   .links-container {
     padding: 1rem 0;
   }
-  @media (max-width: 800px) {
-    display: none;
-  }
+
 `;
 const BigSidebar = () => {
   const { sidebarOpen } = useSelector((state) => state.user);

@@ -43,7 +43,7 @@ const AddJob = () => {
     isEditing: false,
   };
   const [job, setJob] = useState(
-    location.state.item ? location.state.item : obj
+    (location.state && location.state.item )? location.state.item : obj
   );
   const handleSubmit = (e) => {
     e.preventDefault();

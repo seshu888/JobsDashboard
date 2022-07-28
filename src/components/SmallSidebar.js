@@ -11,6 +11,7 @@ const Wrapper = styled.main`
   }
   .sidebar-container {
     position: fixed;
+    
     inset: 0;
     background: rgba(0, 0, 0, 0.7);
     display: flex;
@@ -25,7 +26,7 @@ const Wrapper = styled.main`
   }
   .content {
     background: var(--white);
-    width: var(--fluid-width);
+    max-width: var(--fluid-width);
     height: 90vh;
     border-radius: var(--borderRadius);
     padding: 4rem 2rem;

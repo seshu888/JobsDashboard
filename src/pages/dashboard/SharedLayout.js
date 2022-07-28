@@ -36,14 +36,23 @@ const Wrapper = styled.main`
     overflow-y: auto;
     background-color: #f8f9fa;
   }
+  @media (max-width: 800px) {
+    .left {
+      display:none;
+    };
+    .sidebarOpen .right {
+      width: calc(100vw);
+    }
+  }
 `;
 const SharedLayout = () => {
   const { sidebarOpen } = useSelector((state) => state.user);
   return (
     <Wrapper>
       <div className={sidebarOpen ? "dashboard sidebarOpen" : "dashboard"}>
+      <SmallSidebar />
         <div className="left">
-          <SmallSidebar />
+         
           <BigSidebar />
         </div>
         <div className="right">

@@ -236,3 +236,9 @@ ul {
 .toast-succ{
   animation: toast 0.4s linear ;
 }
+
+@media (max-width:800px){
+  .logo{
+    width:100px;
+  }
+}
