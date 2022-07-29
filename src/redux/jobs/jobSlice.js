@@ -27,7 +27,7 @@ export const getAllJobsStats = createAsyncThunk(
 export const getAllJobs = createAsyncThunk("getAllJobs", async (data,thunkAPI) => {
   
   try {
-    let res = await customApi.get(`/jobs?status=${data.status}&jobType=${data.jobType}&page=${data.page}&search=${data.searchText}`);
+    let res = await customApi.get(`/jobs?status=${data.status}&jobType=${data.jobType}&page=${data.page?data.page:1}&search=${data.searchText}`);
     return res.data;
   } catch (error) {}
 });
