@@ -55,7 +55,7 @@ const Filters = ({ handleFilters }) => {
   return (
     <Wrapper>
       <form>
-        {job.isEditing ? <h3>Edit Job</h3> : <h3>Add Job</h3>}
+   <h3>Search here </h3> 
         <div className="form-center">
           <Input
             type="text"

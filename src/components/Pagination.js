@@ -33,6 +33,16 @@ const Wrapper = styled.section`
     display: flex;
     align-items: center;
   }
+  @media (max-width:500px){
+    .next-btn,
+    .prev-btn {
+      padding: 0.3rem 0.7rem;
+    }
+    .btn {
+      padding: 0.3rem 0.7rem;
+    }
+  }
+
 `;
 const Pagination = ({ pageObj ,handlePage}) => {
 
