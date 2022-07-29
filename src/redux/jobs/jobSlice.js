@@ -24,9 +24,10 @@ export const getAllJobsStats = createAsyncThunk(
     } catch (error) {}
   }
 );
-export const getAllJobs = createAsyncThunk("getAllJobs", async (thunkAPI) => {
+export const getAllJobs = createAsyncThunk("getAllJobs", async (data,thunkAPI) => {
+  
   try {
-    let res = await customApi.get("/jobs");
+    let res = await customApi.get(`/jobs?status=${data.status}&jobType=${data.jobType}&page=${data.page}&search=${data.searchText}`);
     return res.data;
   } catch (error) {}
 });
@@ -50,6 +51,7 @@ export const editJob = createAsyncThunk(
     } catch (error) {}
   }
 )
+
 
 const jobSlice = createSlice({
   name: "job",
